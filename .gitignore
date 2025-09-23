@@ -1,0 +1,15 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Node (si usas npm)
+node_modules/
+
+# Logs
+*.log
+
+# Otros temporales
+*.tmp
