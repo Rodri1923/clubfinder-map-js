@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Club Finder Map</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Leaflet CSS sin SRI -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+  <div id="sidebar">
+    <h2>Agregar Club</h2>
+    <form id="addClubForm">
+      <input type="text" id="clubName" placeholder="Nombre" required>
+      <select id="clubType" required>
+        <option value="" disabled selected>Seleccionar Deporte</option>
+        <option value="futbol">Fútbol</option>
+        <option value="tenis">Tenis</option>
+        <option value="basquet">Básquet</option>
+        <option value="padel">Pádel</option>
+        <option value="natacion">Natación</option>
+        <option value="remo">Remo</option>
+        <option value="rugby">Rugby</option>
+      </select>
+      <input type="text" id="clubPhoto" placeholder="URL foto (opcional)">
+      <button type="submit">Agregar</button>
+    </form>
+
+    <h2>Buscar lugar</h2>
+    <input type="text" id="searchInput" placeholder="Buscar...">
+    <ul id="searchResults"></ul>
+
+    <h2>Filtrar</h2>
+    <select id="filterType">
+      <option value="all">Todos</option>
+      <option value="futbol">Fútbol</option>
+      <option value="tenis">Tenis</option>
+      <option value="basquet">Básquet</option>
+      <option value="favorites">Favoritos</option>
+    </select>
+
+    <h2>Clubs</h2>
+    <ul id="clubList"></ul>
+  </div>
+
+  <div id="map"></div>
+
+  <!-- Leaflet JS sin SRI -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
