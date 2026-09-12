@@ -1,85 +1,55 @@
-# ClubFinder Map JS 
+# 🗺️ ClubFinder Map JS
 
-**ClubFinder Map JS** is a simple web app to manage sports clubs and courts on an interactive map using Leaflet and OpenStreetMap. Users can add clubs, mark favorites, filter by sport, and see distances from their current location. 
+🌍 **[English](README.md) · [Español](README.es.md)**
 
---- 
+> Interactive web app to manage sports clubs and courts on a map, built with Leaflet and OpenStreetMap.
 
-## Features 
+## 📋 Overview
+Lets users add clubs with location and sport type, mark favorites, filter results, and see distances from their current location — all persisted in `localStorage`, no backend required.
 
-- Interactive map with Leaflet + OpenStreetMap tiles 
-- Add clubs with name, sport type, photo, and location 
-- Mark clubs as favorites 
-- Filter clubs by sport or favorites 
-- Autocomplete search for locations using Photon API 
-- Display distances from user location (if granted) 
-- Move club markers to new locations 
-- Responsive sidebar with scrollable club list 
-- Save all data in `localStorage` (persistent on reload) 
-- Popups with club details and images 
+## 🚀 Features
+- Interactive map with Leaflet + OpenStreetMap tiles
+- Add clubs with name, sport type, photo, and location
+- Mark clubs as favorites and filter by sport
+- Location autocomplete via the Photon API
+- Distance from the user's current location (if permission granted)
+- Drag markers to update a club's location
+- Persistent storage in `localStorage`
 
---- 
+## 🧱 Tech Stack
+- Vanilla JavaScript
+- Leaflet
+- OpenStreetMap
+- Photon API (geocoding)
+- localStorage
 
-## Installation 
+## 📁 Project Structure
+```
+index.html
+css/
+  style.css
+js/
+  app.js
+assets/
+  icons/    → per-sport marker icons
+  default.jpg
+```
 
-1. Clone the repo:
-
-```bash 
-git clone https://github.com/Rodri1923/clubfinder-map-js.git cd clubfinder-map-js 
-``` 
-
-2. Open in VS Code: 
-
+## ▶️ Getting Started
 ```bash
- code . 
-``` 
+git clone https://github.com/Rodri1923/clubfinder-map-js.git
+cd clubfinder-map-js
+npx http-server .
+```
+Then open the URL shown in the terminal.
 
-3. Open with **Live Server** extension (recommended) or install `http-server`: 
+## 🎮 Usage
+1. Click on the map to pick a location for a new club.
+2. Fill in name, sport type, and an optional photo URL.
+3. Click "Add Club" to create a marker.
+4. Use the star to favorite, the trash icon to delete.
+5. Filter by sport or favorites, or search a location with the search bar.
 
-```bash 
-npm install -g http-server http-server 
-``` 
-
-4. Open `http://localhost:8080` (or the port shown) in your browser. 
-
---- 
-
-## Usage 
-
-1. Click on the map to select the location for a new club. 
-2. Fill in the club's name, sport type, and photo URL (optional). 
-3. Click "Add Club" to create a new marker. 
-4. Click a club in the list to center the map on it. 
-5. Use the star button to mark as favorite, trash button to delete. 
-6. Use the filter dropdown to show only certain sports or favorites. 
-7. Use the search bar to find locations via Photon API and add temporary markers. 
-
---- 
-
-## Folder Structure 
-
-```perl 
-clubfinder-map-js/ 
-    ├─ index.html 
-    ├─ css/ 
-    │ └─ style.css 
-    ├─ js/ 
-    │ └─ app.js 
-    ├─ assets/ │ 
-    ├─ icons/ # Custom icons per sport 
-    │ └─ default.jpg # Default club image 
-    ├─ README.md 
-    └─ README.es.md 
-``` 
-
---- 
-
-## Customization 
-- **Add new sports:** add icon in `assets/icons` and update `icons` object in `app.js`. 
-- **Change default image:** replace `assets/default.jpg`. 
-- **Change marker size:** modify `iconSize` in `app.js` icons definitions. 
-
----
-
-## Author
-
-**Rodrigo Navone** – [GitHub Profile](https://github.com/Rodri1923)
+## 👤 Author
+**Rodrigo Navone**
+[GitHub](https://github.com/Rodri1923) · [LinkedIn](https://www.linkedin.com/in/rodrigonavone)

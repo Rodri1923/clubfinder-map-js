@@ -1,85 +1,55 @@
-# ClubFinder Map JS 
+# 🗺️ ClubFinder Map JS
 
-**ClubFinder Map JS** es una aplicación web sencilla para gestionar clubes y canchas en un mapa interactivo usando Leaflet y OpenStreetMap. Los usuarios pueden agregar clubes, marcarlos como favoritos, filtrar por deporte y ver distancias desde su ubicación actual.
+🌍 **[English](README.md) · [Español](README.es.md)**
 
---- 
+> Aplicación web interactiva para gestionar clubes y canchas deportivas en un mapa, construida con Leaflet y OpenStreetMap.
 
-## Características
+## 📋 Descripción
+Permite a los usuarios agregar clubes con ubicación y tipo de deporte, marcarlos como favoritos, filtrar resultados y ver distancias desde su ubicación actual — todo persistido en `localStorage`, sin necesidad de backend.
 
-- Mapa interactivo con Leaflet + mosaicos de OpenStreetMap
+## 🚀 Funcionalidades
+- Mapa interactivo con Leaflet + tiles de OpenStreetMap
 - Agregar clubes con nombre, tipo de deporte, foto y ubicación
-- Marcar clubes como favoritos
-- Filtrar clubes por deporte o favoritos
-- Búsqueda autocompletada de ubicaciones usando la API de Photon 
-- Mostrar distancias desde la ubicación del usuario (si se concede permiso) 
-- Mover marcadores de clubes a nuevas ubicaciones
-- Barra lateral responsiva con lista de clubes desplazable 
-- Guardar todos los datos en `localStorage` (persistente al recargar)
-- Ventanas emergentes con detalles e imágenes de los clubes
+- Marcar clubes como favoritos y filtrar por deporte
+- Autocompletado de ubicaciones vía la API de Photon
+- Distancia desde la ubicación actual del usuario (si otorga permiso)
+- Arrastrar marcadores para actualizar la ubicación de un club
+- Almacenamiento persistente en `localStorage`
 
---- 
+## 🧱 Stack técnico
+- JavaScript (Vanilla)
+- Leaflet
+- OpenStreetMap
+- Photon API (geocoding)
+- localStorage
 
-## Instalación
+## 📁 Estructura del proyecto
+```
+index.html
+css/
+  style.css
+js/
+  app.js
+assets/
+  icons/    → íconos de marcador por deporte
+  default.jpg
+```
 
-1. Clona este repositorio:
-
-```bash 
-git clone https://github.com/Rodri1923/clubfinder-map-js.git cd clubfinder-map-js 
-``` 
-
-2. Abrir en VS Code: 
-
+## ▶️ Cómo ejecutar
 ```bash
- code . 
-``` 
+git clone https://github.com/Rodri1923/clubfinder-map-js.git
+cd clubfinder-map-js
+npx http-server .
+```
+Después abrí la URL que muestra la terminal.
 
-3. Abrir con la extensión **Live Server** (recomendado) o instalar `http-server`: 
+## 🎮 Uso
+1. Hacé click en el mapa para elegir la ubicación de un nuevo club.
+2. Completá nombre, tipo de deporte y una URL de foto opcional.
+3. Click en "Add Club" para crear el marcador.
+4. Usá la estrella para marcar favorito, el ícono de basura para eliminar.
+5. Filtrá por deporte o favoritos, o buscá una ubicación con la barra de búsqueda.
 
-```bash 
-npm install -g http-server http-server 
-``` 
-
-4. Abrir `http://localhost:8080` (o el puerto mostrado) en tu navegador. 
-
---- 
-
-## Uso
-
-1. Haz clic en el mapa para seleccionar la ubicación de un nuevo club.
-2. Completa el nombre del club, tipo de deporte y URL de la foto (opcional).
-3. Haz clic en "Add Club" para crear un nuevo marcador.
-4. Haz clic en un club de la lista para centrar el mapa en él.
-5. Usa el botón de estrella para marcar como favorito y el botón de papelera para eliminar.
-6. Usa el desplegable de filtros para mostrar solo ciertos deportes o favoritos.
-7. Usa la barra de búsqueda para encontrar ubicaciones mediante la API de Photon y agregar marcadores temporales.
-
---- 
-
-## Estructura de Carpetas
-
-```perl 
-clubfinder-map-js/ 
-    ├─ index.html 
-    ├─ css/ 
-    │ └─ style.css 
-    ├─ js/ 
-    │ └─ app.js 
-    ├─ assets/ │ 
-    ├─ icons/ # iconos para cada tipo de deporte
-    │ └─ default.jpg # Imagen predeterminada 
-    ├─ README.md 
-    └─ README.es.md 
-``` 
-
---- 
-
-## Personalización 
-- **Agregar nuevos deportes:** añade un ícono en `assets/icons` y actualiza el objeto `icons` en `app.js`.
-- **Cambiar la imagen predeterminada:** reemplaza `assets/default.jpg`. 
-- **Cambiar el tamaño de los marcadores:** modifica `iconSize` en las definiciones de íconos dentro de `app.js`.
-
----
-
-## Autor
-
-**Rodrigo Navone** – [GitHub Profile](https://github.com/Rodri1923)
+## 👤 Autor
+**Rodrigo Navone**
+[GitHub](https://github.com/Rodri1923) · [LinkedIn](https://www.linkedin.com/in/rodrigonavone)
